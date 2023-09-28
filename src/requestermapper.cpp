@@ -29,6 +29,10 @@ void RequesterMapper::service(HttpRequest& request, HttpResponse& response)
     {
         staticFileController->service(request, response);
     }
+    else if (path == "/transport")
+    {
+        transportController.service(request, response);
+    }
     else
     {
         response.setStatus(404, "Not found");

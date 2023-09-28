@@ -3,6 +3,7 @@
 #include "httprequesthandler.h"
 #include "controllers/logincontroller.h"
 #include "controllers/registercontroller.h"
+#include "controllers/transportcontroller.h"
 
 using namespace stefanfrings;
 
@@ -19,4 +20,5 @@ public:
 private:
     LoginController loginController;
     RegisterController registerController;
+    TransportController transportController;
 };

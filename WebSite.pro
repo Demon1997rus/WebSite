@@ -26,7 +26,8 @@ SOURCES += src/main.cpp \
     src/requestermapper.cpp \
     src/controllers/logincontroller.cpp \
     src/database/loginbase.cpp \
-    src/controllers/registercontroller.cpp
+    src/controllers/registercontroller.cpp \
+    src/controllers/transportcontroller.cpp
 
 include(../QtWebApp/QtWebApp/httpserver/httpserver.pri)
 include(../QtWebApp/QtWebApp/templateengine/templateengine.pri)
@@ -44,4 +45,5 @@ HEADERS += \
     src/requestermapper.h \
     src/controllers/logincontroller.h \
     src/database/loginbase.h \
-    src/controllers/registercontroller.h
+    src/controllers/registercontroller.h \
+    src/controllers/transportcontroller.h

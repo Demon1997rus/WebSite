@@ -18,7 +18,7 @@ LoginBase::LoginBase(QObject* parent) : QObject(parent), db(QSqlDatabase::addDat
     }
     else
     {
-        qCritical() << db.lastError().text();
+        qCritical() << Q_FUNC_INFO << db.lastError().text();
         qFatal("Login base no open");
     }
 }

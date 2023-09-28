@@ -13,7 +13,7 @@ void RegisterController::service(HttpRequest& request, HttpResponse& response)
 
     if (!username.isEmpty() && !password.isEmpty() && !email.isEmpty())
     {
-        // TODO::ЛОГИКА РЕГИСТРАЦИЙ ЕСЛИ ПОЛЯ НЕ ПУСТЫЕ!ц
+        // TODO::ЛОГИКА РЕГИСТРАЦИЙ ЕСЛИ ПОЛЯ НЕ ПУСТЫЕ!
     }
 
     qDebug() << Q_FUNC_INFO << "username----->" << username.constData();
