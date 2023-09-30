@@ -11,14 +11,16 @@ void RegisterController::service(HttpRequest& request, HttpResponse& response)
     QByteArray password = request.getParameter("password");
     QByteArray email = request.getParameter("email");
 
-    if (!username.isEmpty() && !password.isEmpty() && !email.isEmpty())
-    {
-        // TODO::ЛОГИКА РЕГИСТРАЦИЙ ЕСЛИ ПОЛЯ НЕ ПУСТЫЕ!
-    }
-
     qDebug() << Q_FUNC_INFO << "username----->" << username.constData();
     qDebug() << Q_FUNC_INFO << "password----->" << password.constData();
     qDebug() << Q_FUNC_INFO << "email----->" << email.constData();
+
+    if (!username.isEmpty() && !password.isEmpty() && !email.isEmpty())
+    {
+        loginBase->addUser(username, password);
+        response.redirect("/login");
+        return;
+    }
 
     QByteArray language = request.getHeader("Accept-Language");
 
