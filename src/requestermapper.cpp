@@ -33,6 +33,18 @@ void RequesterMapper::service(HttpRequest& request, HttpResponse& response)
     {
         transportController.service(request, response);
     }
+    else if (path == "/services")
+    {
+        servicesController.service(request, response);
+    }
+    else if (path == "/about")
+    {
+        aboutController.service(request, response);
+    }
+    else if (path == "/contacts")
+    {
+        contactsController.service(request, response);
+    }
     else
     {
         response.setStatus(404, "Not found");

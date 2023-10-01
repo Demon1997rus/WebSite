@@ -4,6 +4,9 @@
 #include "controllers/logincontroller.h"
 #include "controllers/registercontroller.h"
 #include "controllers/transportcontroller.h"
+#include "controllers/servicescontroller.h"
+#include "controllers/aboutcontroller.h"
+#include "controllers/contactscontroller.h"
 
 using namespace stefanfrings;
 
@@ -21,4 +24,7 @@ private:
     LoginController loginController;
     RegisterController registerController;
     TransportController transportController;
+    ServicesController servicesController;
+    AboutController aboutController;
+    ContactsController contactsController;
 };

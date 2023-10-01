@@ -129,3 +129,84 @@ button:hover {
 .register-form p {
     text-align: center;
 }
+
+
+/* Услуги */
+.services {
+    padding: 20px;
+    text-align: left;
+}
+
+.services h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.services p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.services ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.services ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* "О нас" */
+.about {
+    padding: 20px;
+    text-align: left;
+}
+
+.about h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.about ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.about ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+/* "Контакты" */
+.contacts {
+    padding: 20px;
+    text-align: left;
+}
+
+.contacts h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contacts p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.contacts ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.contacts ul li {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+

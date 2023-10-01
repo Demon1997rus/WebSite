@@ -27,7 +27,10 @@ SOURCES += src/main.cpp \
     src/controllers/logincontroller.cpp \
     src/database/loginbase.cpp \
     src/controllers/registercontroller.cpp \
-    src/controllers/transportcontroller.cpp
+    src/controllers/transportcontroller.cpp \
+    src/controllers/servicescontroller.cpp \
+    src/controllers/aboutcontroller.cpp \
+    src/controllers/contactscontroller.cpp
 
 include(../QtWebApp/QtWebApp/httpserver/httpserver.pri)
 include(../QtWebApp/QtWebApp/templateengine/templateengine.pri)
@@ -37,7 +40,10 @@ OTHER_FILES = etc/website.ini \
         data/styles.css \
         data/login.html \
         data/main.html \
-        data/registration.html
+        data/registration.html \
+        data/contacts.html \
+        data/about.html \
+        data/services.html
 
 
 HEADERS += \
@@ -46,4 +52,7 @@ HEADERS += \
     src/controllers/logincontroller.h \
     src/database/loginbase.h \
     src/controllers/registercontroller.h \
-    src/controllers/transportcontroller.h
+    src/controllers/transportcontroller.h \
+    src/controllers/servicescontroller.h \
+    src/controllers/aboutcontroller.h \
+    src/controllers/contactscontroller.h
