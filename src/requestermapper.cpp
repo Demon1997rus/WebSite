@@ -9,13 +9,6 @@ RequesterMapper::~RequesterMapper() {}
 void RequesterMapper::service(HttpRequest& request, HttpResponse& response)
 {
     QByteArray path = request.getPath();
-    HttpSession session = sessionStore->getSession(request, response, false);
-    QString username = session.get("username").toString();
-    QByteArray sessionId = sessionStore->getSessionId(request, response);
-
-    qDebug() << Q_FUNC_INFO << "path--------------------->" << path.data();
-    qDebug() << Q_FUNC_INFO << "sessionId--------------------->" << sessionId.data();
-    qDebug() << Q_FUNC_INFO << "username--------------------->" << username;
 
     if (path == "/login")
     {
@@ -45,10 +38,17 @@ void RequesterMapper::service(HttpRequest& request, HttpResponse& response)
     {
         contactsController.service(request, response);
     }
+    else if (path == "/create-order")
+    {
+        orderController.service(request, response);
+    }
+    else if (path == "/my-orders")
+    {
+        myOrdersController.service(request, response);
+    }
     else
     {
         response.setStatus(404, "Not found");
         response.write("The URL is wrong, no such document", true);
     }
-    qDebug() << Q_FUNC_INFO << "RequestMapper: finished request" << endl;
 }

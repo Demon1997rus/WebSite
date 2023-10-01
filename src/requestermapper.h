@@ -7,6 +7,8 @@
 #include "controllers/servicescontroller.h"
 #include "controllers/aboutcontroller.h"
 #include "controllers/contactscontroller.h"
+#include "controllers/ordercontroller.h"
+#include "controllers/myorderscontroller.h"
 
 using namespace stefanfrings;
 
@@ -27,4 +29,6 @@ private:
     ServicesController servicesController;
     AboutController aboutController;
     ContactsController contactsController;
+    OrderController orderController;
+    MyOrdersController myOrdersController;
 };

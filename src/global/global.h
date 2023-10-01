@@ -5,6 +5,7 @@
 #include "templatecache.h"
 #include "filelogger.h"
 #include "../database/loginbase.h"
+#include "../utils/order.h"
 
 using namespace stefanfrings;
 
@@ -22,3 +23,7 @@ extern FileLogger* logger;
 
 /** База данных для пользователей */
 extern LoginBase* loginBase;
+
+/** Информация по заказам пользователей */
+extern QString currentUser;
+extern QMultiMap<QString, Order> mapOrder;

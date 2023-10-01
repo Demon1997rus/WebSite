@@ -30,7 +30,10 @@ SOURCES += src/main.cpp \
     src/controllers/transportcontroller.cpp \
     src/controllers/servicescontroller.cpp \
     src/controllers/aboutcontroller.cpp \
-    src/controllers/contactscontroller.cpp
+    src/controllers/contactscontroller.cpp \
+    src/controllers/ordercontroller.cpp \
+    src/utils/order.cpp \
+    src/controllers/myorderscontroller.cpp
 
 include(../QtWebApp/QtWebApp/httpserver/httpserver.pri)
 include(../QtWebApp/QtWebApp/templateengine/templateengine.pri)
@@ -43,7 +46,8 @@ OTHER_FILES = etc/website.ini \
         data/registration.html \
         data/contacts.html \
         data/about.html \
-        data/services.html
+        data/services.html \
+        data/order.html
 
 
 HEADERS += \
@@ -55,4 +59,7 @@ HEADERS += \
     src/controllers/transportcontroller.h \
     src/controllers/servicescontroller.h \
     src/controllers/aboutcontroller.h \
-    src/controllers/contactscontroller.h
+    src/controllers/contactscontroller.h \
+    src/controllers/ordercontroller.h \
+    src/utils/order.h \
+    src/controllers/myorderscontroller.h

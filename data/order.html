@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Транспортная Компания - Оформление заказа</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Оформление заказа</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/transport">Главная</a></li>
+            <li><a href="/services">Услуги</a></li>
+            <li><a href="/about">О нас</a></li>
+            <li><a href="/contacts">Контакты</a></li>
+            <li><a href="/my-orders">Мои заказы</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="order-form">
+            <h2>Заполните данные для заказа</h2>
+            <form>
+                <div class="form-group">
+                    <label for="service">Выберите вид услуги:</label>
+                    <select id="service" name="service" required>
+                        <option value="cargo">Грузовые перевозки</option>
+                        <option value="passenger">Пассажирские перевозки</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="location">Местоположение:</label>
+                    <input type="text" id="location" name="location" required>
+                </div>
+                <div class="form-group">
+                    <label for="date">Дата:</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="details">Дополнительные детали:</label>
+                    <textarea id="details" name="details"></textarea>
+                </div>
+                <button type="submit">Отправить заказ</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Транспортная Компания</p>
+    </footer>
+</body>
+</html>
