@@ -4,8 +4,7 @@
 #include "staticfilecontroller.h"
 #include "templatecache.h"
 #include "filelogger.h"
-#include "../database/loginbase.h"
-#include "../utils/order.h"
+#include "../database/database.h"
 
 using namespace stefanfrings;
 
@@ -21,9 +20,8 @@ extern TemplateCache* templateCache;
 /** Перенаправляет сообщения журнала в файл */
 extern FileLogger* logger;
 
-/** База данных для пользователей */
-extern LoginBase* loginBase;
+/** База данных */
+extern DataBase* dataBase;
 
-/** Информация по заказам пользователей */
+/** Текущий пользователь */
 extern QString currentUser;
-extern QMultiMap<QString, Order> mapOrder;

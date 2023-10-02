@@ -54,8 +54,8 @@ int main(int argc, char* argv[])
     QCoreApplication app(argc, argv);
     QString configPath = searchConfigFile();
 
-    //База данных пользователей
-    loginBase = new LoginBase(&app);
+    //Инициализация база данных
+    dataBase = new DataBase(&app);
 
     // Настройка введения журнала ошибок
     QSettings* logSettings = new QSettings(configPath, QSettings::IniFormat, &app);

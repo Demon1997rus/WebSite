@@ -25,7 +25,6 @@ SOURCES += src/main.cpp \
     src/global/global.cpp \
     src/requestermapper.cpp \
     src/controllers/logincontroller.cpp \
-    src/database/loginbase.cpp \
     src/controllers/registercontroller.cpp \
     src/controllers/transportcontroller.cpp \
     src/controllers/servicescontroller.cpp \
@@ -33,7 +32,8 @@ SOURCES += src/main.cpp \
     src/controllers/contactscontroller.cpp \
     src/controllers/ordercontroller.cpp \
     src/utils/order.cpp \
-    src/controllers/myorderscontroller.cpp
+    src/controllers/myorderscontroller.cpp \
+    src/database/database.cpp
 
 include(../QtWebApp/QtWebApp/httpserver/httpserver.pri)
 include(../QtWebApp/QtWebApp/templateengine/templateengine.pri)
@@ -54,7 +54,6 @@ HEADERS += \
     src/global/global.h \
     src/requestermapper.h \
     src/controllers/logincontroller.h \
-    src/database/loginbase.h \
     src/controllers/registercontroller.h \
     src/controllers/transportcontroller.h \
     src/controllers/servicescontroller.h \
@@ -62,4 +61,5 @@ HEADERS += \
     src/controllers/contactscontroller.h \
     src/controllers/ordercontroller.h \
     src/utils/order.h \
-    src/controllers/myorderscontroller.h
+    src/controllers/myorderscontroller.h \
+    src/database/database.h

@@ -18,7 +18,7 @@ void OrderController::service(HttpRequest& request, HttpResponse& response)
         int month = splitDate.value(1).toInt();
         int day = splitDate.value(2).toInt();
         Order order(serviceType, location, QDate(year, month, day), details);
-        mapOrder.insert(currentUser, order);
+        dataBase->addOrder(currentUser, order);
         response.redirect("/my-orders");
         return;
     }

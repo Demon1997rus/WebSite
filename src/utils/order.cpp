@@ -7,6 +7,19 @@ Order::Order(const QString& _serviceType, const QString& _location, const QDate&
 {
 }
 
+Order::Order(const Order& other)
+  : serviceType(other.serviceType), location(other.location), date(other.date), details(other.details)
+{
+}
+
+Order::Order(Order&& other)
+  : serviceType(std::move(other.serviceType))
+  , location(std::move(other.location))
+  , date(other.date)
+  , details(std::move(other.details))
+{
+}
+
 void Order::print() const
 {
     qDebug() << "service type = " << serviceType;
