@@ -15,14 +15,13 @@ void LoginController::service(HttpRequest& request, HttpResponse& response)
         {
             currentUser = username;
             response.redirect("/transport");
-            return;
         }
         else
         {
             response.setStatus(401, "Неверное имя пользователя и пароль");
             response.write("Invalid username or password");
-            return;
         }
+        return;
     }
     QByteArray language = request.getHeader("Accept-Language");
     Template t = templateCache->getTemplate("login", language);
