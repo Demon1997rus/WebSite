@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Мои заказы</title>
+    <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+    <header>
+        <h1>Добро пожаловать, {name}!</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/transport">Главная</a></li>
+            <li><a href="/services">Услуги</a></li>
+            <li><a href="/about">О нас</a></li>
+            <li><a href="/contacts">Контакты</a></li>
+            <li><a href="/my-orders">Мои заказы</a></li>
+        </ul>
+    </nav>
+        <table class="order-table">
+            <thead>
+                <tr>
+                    <th>№</th>
+                    <th>Вид услуги</th>
+                    <th>Местоположение</th>
+                    <th>Дата</th>
+                    <th>Дополнительные детали</th>
+                </tr>
+            </thead>
+            <tbody>
+            {loop row}
+            <tr>
+                <td>{row.number}</td>
+                <td>{row.serviceType}</td>
+                <td>{row.location}</td>
+                <td>{row.date}</td>
+                <td>{row.details}</td>
+            </tr>
+            {end row}
+            </tbody>
+        </table>
+        <footer>
+            <p>&copy; 2023 Транспортная Компания</p>
+        </footer>
+    </body>
+</html>

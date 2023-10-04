@@ -6,7 +6,7 @@
 
 DataBase::DataBase(QObject* parent) : QObject(parent), db(QSqlDatabase::addDatabase("QSQLITE"))
 {
-    db.setDatabaseName("../WebSite/data/database");
+    db.setDatabaseName("../WebSite/data/database.db");
     if (db.open())
     {
         QSqlQuery query(db);
