@@ -3,15 +3,20 @@
 #include <QObject>
 #include <QSqlDatabase>
 
-class LoginBase : public QObject
+#include "../utils/order.h"
+
+class DataBase : public QObject
 {
     Q_OBJECT
 public:
-    explicit LoginBase(QObject* parent = nullptr);
+    explicit DataBase(QObject* parent = nullptr);
 
 public:
     bool addUser(const QString& username, const QString& password) const;
     bool authentication(const QString& username, const QString& password) const;
+    bool addOrder(const QString& username, const Order& order);
+    QList<QStringList> getOrdersByUsername(const QString& username);
+    bool deleteOrder(int orderId);
 
 private:
     bool checkUser(const QString& username) const;

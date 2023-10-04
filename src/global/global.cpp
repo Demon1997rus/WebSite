@@ -4,6 +4,5 @@ HttpSessionStore* sessionStore;
 StaticFileController* staticFileController;
 TemplateCache* templateCache;
 FileLogger* logger;
-LoginBase* loginBase;
-QMultiMap<QString, Order> mapOrder;
+DataBase* dataBase;
 QString currentUser;

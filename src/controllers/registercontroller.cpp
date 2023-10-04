@@ -12,7 +12,7 @@ void RegisterController::service(HttpRequest& request, HttpResponse& response)
 
     if (!username.isEmpty() && !password.isEmpty() && !email.isEmpty())
     {
-        if (loginBase->addUser(username, password))
+        if (dataBase->addUser(username, password))
         {
             response.redirect("/login");
         }

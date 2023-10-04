@@ -6,7 +6,10 @@
 class Order
 {
 public:
+    Order() = default;
     Order(const QString& _serviceType, const QString& _location, const QDate& _date, const QString& _details);
+    Order(const Order& other);
+    Order(Order&& other);
 
 public:
     void print() const;

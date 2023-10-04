@@ -9,7 +9,6 @@ RequesterMapper::~RequesterMapper() {}
 void RequesterMapper::service(HttpRequest& request, HttpResponse& response)
 {
     QByteArray path = request.getPath();
-
     if (path == "/login")
     {
         loginController.service(request, response);

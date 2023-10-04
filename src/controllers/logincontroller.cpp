@@ -11,7 +11,7 @@ void LoginController::service(HttpRequest& request, HttpResponse& response)
 
     if (!username.isEmpty() && !password.isEmpty())
     {
-        if (loginBase->authentication(username, password))
+        if (dataBase->authentication(username, password))
         {
             currentUser = username;
             response.redirect("/transport");
