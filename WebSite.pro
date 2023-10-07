@@ -47,7 +47,8 @@ OTHER_FILES = etc/website.ini \
         data/contacts.html \
         data/about.html \
         data/services.html \
-        data/order.html
+        data/order.html \
+        data/myorder.html
 
 
 HEADERS += \
